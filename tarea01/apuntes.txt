@@ -1,0 +1,48 @@
+comunas = [
+    "ancud", "castro", "chonchi", "curaco de vélez", "dalcahue",
+    "puqueldón", "queilén", "quemchi", "quellón", "quinchao", "calbuco",
+    "cochamó", "fresia", "frutillar", "llanquihue", "los muermos", "maullín",
+    "puerto montt", "puerto varas", "osorno", "puerto octay", "purranque",
+    "puyehue", "río negro", "san juan de la costa", "san pablo", "chaitén",
+    "futaleufú", "hualaihué", "palena",
+]
+
+=== Ejemplos interesantes (id) ==
+4: valdivia
+
+=== Tokens ===
+
+"comuna de xxx"
+"Los ríos" (regiones)
+"región de xxx"
+"regional de xxx"
+alcalde
+capital
+cerrillos
+chañarál: 
+chiloé ?
+collipulli
+comuna de río bueno
+coñaripe, panguipulli
+La araucanía
+la unión
+lago ranco
+ministerio - chile ??
+santiago - metropolitana
+Tenglo, Panitao, la arena: puerto montt?
+Valdivia
+
+
+categoria:
+nacional??
+internacional??
+covid?
+
+
+otros:
+israel
+paraguai
+tricel: nacional
+originarios?: nacional
+congreso: nacional
+minsal?: nacional
