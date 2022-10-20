@@ -5,8 +5,11 @@ En esta tarea se compone de un notebook con los códigos necesarios para realiza
 
 __Análisis general__:
 > Dentro de los tópicos encontrados queda bastante clara la similitud de tópicos entre la mayoría de comunas en Chiloé. Aquí también es bastante común que se nombre a las vías y peajes.
-> En general, las palabras más interesantes para identificar problemáticas parecen ser: "necesidad", "problema", "consejeros", "dirigentes", "luz", "viviendas", "campamentos", , "imputado". En esta misma línea, quizá se podría tener una lista previamente creada con conceptos claves, principalmente en el ámbito delictual (como para identificar autoridades que se han involucrado en algún delito) y sus diversas maneras de realizarse, considerando también por ejemplo los delitos ambientales.
+
+> En general, las palabras más interesantes para identificar problemáticas parecen ser: "necesidad", "problema", "consejeros", "dirigentes", "luz", "viviendas", "campamentos", "imputado". En esta misma línea, quizá se podría tener una lista previamente creada con conceptos claves, principalmente en el ámbito delictual (como para identificar autoridades que se han involucrado en algún delito) y sus diversas maneras de realizarse, considerando también por ejemplo los delitos ambientales.
+
 > Los tópicos relacionados con el COVID suelen clasificarse con separaciones bastante claras, como por ejemplo las noticias que se refieren a los contagios y las que se refieren a vacunación. También hay tópicos relacionados con cambio de fase en el plan paso a paso, el uso de camas críticas o ventiladores, y la actualización de protocolos.
+
 > Respecto a la elección de los mejores modelos de acuerdo a su métrica de coherencia, parece ser que por sobre el valor (0.5) los tópicos son bastante robustos individualmente, por lo que podría ser mejor opción escoger una menor cantidad de tópicos (sacrificando un poco de coherencia).
 
 __Análisis detallado__:
