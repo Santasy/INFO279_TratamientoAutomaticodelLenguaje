@@ -1,4 +1,4 @@
-# INFO279 - Tratamiento Automatico del Lenguaje (TAL)
+# INFO279 - Tratamiento Automático del Lenguaje (TAL)
 
 Portafolio de tareas TAL.
 
