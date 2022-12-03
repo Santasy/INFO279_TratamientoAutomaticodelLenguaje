@@ -1,0 +1,64 @@
+===== Preprocesamientos:
+
+    Se puede utilizar spacy (lib NLP)
+
+
+===== Modelamiento de tópicos (LDA)
+    Latent Dirichlet Allocation:
+    
+    - Clasifica noticias con una distribución de tópicos
+    - A su vez, entrega la distribución de palabras en cada tópico
+    - Requiere de un diccionario de palabras
+
+    1. Se pre-procesa la data:
+        - Cada noticia se representa como una lista de:
+            - Sustantivos (NOUN)
+            - Conceptos claves (NOUN-de-NOUN, NOUN-ADJ)
+            - Entidades (PER, ORG)
+
+    2. Se entrena configurado con una cantidad específica de tópicos
+
+    3. Se pueden calcular métricas:
+
+        * Perplejidad (menos es mejor):
+
+
+        * Coherencia (más es mejor):
+            - En las actividades se utiliza "c_v"
+
+===== Word Embedding
+
+    - Representaciones de palabras, que permite establecer similitudes entre conceptos (ej frutas, etc)
+
+    - En TAL, se considera el lenguaje con componentes:
+
+        1. morfológico o fonológico: Se reconocen las palabras y se le comienza a dar un significado
+        
+        2. semántico: Se conceptualiza sobre las relaciones entre palabras
+        
+        3. pragmático-discurso: se toma más atención al contexto (cultural, interlocutores, etc)
+
+    - Permite realizar operaciones como:
+        sumar, restar, similitud coseno, entre otras
+
+    - Se pueden utilizar modelos pre-entrenados para español
+
+
+===== Clasificación supervisada de textos (Regresión Logística, Transformer)
+
+- Se comparan con las métricas:
+    1. Accuracy: 
+        ti_pred/ti_real: proporción respecto a totales por etiqueta
+
+    2. Precision:
+        Habilidad de no etiquetar una real-positiva como negativa.
+
+        true-pos / (true_pos + false_pos)
+
+    3. Recall:
+    Habilidad de encontrar todos los positivos
+
+        true-pos / (true_pos + false_neg)
+
+    - Hay funciones que crean curvas de esto, variando un "threshold".
+
