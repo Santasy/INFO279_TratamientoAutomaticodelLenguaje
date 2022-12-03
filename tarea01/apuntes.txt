@@ -1,3 +1,7 @@
+2413 noticias totales
+1123 después de comunas de los lagos
+
+
 comunas = [
     "ancud", "castro", "chonchi", "curaco de vélez", "dalcahue",
     "puqueldón", "queilén", "quemchi", "quellón", "quinchao", "calbuco",
@@ -46,3 +50,5 @@ tricel: nacional
 originarios?: nacional
 congreso: nacional
 minsal?: nacional
+
+https://www.machinelearningplus.com/nlp/topic-modeling-visualization-how-to-present-results-lda-models/
