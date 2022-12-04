@@ -1,0 +1,41 @@
+Se proponen dos arquitecturas de modelos para computar representaciones contínuas de vectores para datasets grandes.
+    - Estas representaciones contínuas son utilizadas por los LSA (Latent Semantic Analysis) y LDA.
+
+- Los modelos neuronales tienen mejores resultados que los modelos n-gramas.
+
+- Proponen una metodología para calcular similitudes sintácticas y semánticas.
+
+- Trabajan mejorando la arquitectura de un modelo anterior:
+    - NNLM, con una single-layer al comienzo.
+
+===== NNLM
+    Feedforward Neural Net Language Model
+
+    1. N words son encoded in 1-of-V conding, V es el tamaño del vocabulario
+
+    2. Se proyecta a una Proyection Layer de NxD, usando una shared projection matrix.
+        - Como solo N inputs están activos, la composición de esta capa puede ser barata.
+
+    3. Pasa por una hidden layer (H)
+
+    La complejidad computacional por cada entrenamiento es:
+        Q = NxD + NxDxH + HxV
+
+    # En base a lo costoso de NxDxH se propone una alternativa sin hidden-layers y que depende fuertemente de la eficiencia de la normalización softmax
+
+===== RNNLM (recurrent)
+
+    - Elimina la Projection Layer
+    - Añade una recurrent matrix que conecta la hidden layer con sí misma, produciendo una "memoria a corto plazo" que depende de su estado anterior.
+
+    La complejidad computacional por cada entrenamiento es:
+        Q = HxH + HxV
+
+    
+===== Log-linear Models
+
+1. Continuous BOW
+
+2. Continuous Skip-Gram (SG)
+
+(...)

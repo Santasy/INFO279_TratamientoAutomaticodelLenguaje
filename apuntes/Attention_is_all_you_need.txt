@@ -1,0 +1,40 @@
+Los modelos de traducción secuenciales se realizan en CNNs que incluyen un encoder y un decoder
+
+# Transformer: solo basado en mecanismos de atención, dejando de lado la recurrencia y convoluciones.  Busca dependencias globales entre input-output (?). Su funcionamiento es altamente paralelizable.
+
+Los mecanismos de atención permiten modelar dependencias sin importarle la distancia entre secuencias de input-output, realizando un pequeño número de operaciones. Algunos casos lo combinan con redes recurrentes.
+
+# Self-attention: Mecanismo de atención que relaciona diferentes posiciones dentro de una secuencia para crear una representación de la secuencia. Se puede utilizar en comprensión lectora, creación de resúmenes, y en aprender representanciones de palabras que son independientes de la tarea.
+
+Las redes de memoria end-to-end se basan en un mecanismo de atención recurrente en vez de una recurrencia alineada en secuencia. Funcionan bien en tareas simples de respuesta a preguntas y tareas de modelados de lenguaje.
+
+===== Transformer =====
+
+Utilizan stacked self-attention y point-wise, fully-connected layers para el encoder como decoder.
+
+=== Scaled Dot-product Attention
+
+El input consiste de queries y keys de dimensión d_k, y valores de dimensión d_v. 
+Se computa el dot product de la query con todas las claves, se divide cada una por root(d_k), y softmax a la función para obtener los pesos de los valores.
+
+En ejecución, la atención se computa con múltiples queries simultáneas, juntas en una matriz Q. Las claves y valores se integran en las matrices K y V.
+
+Así:
+
+    Attention(Q, K, V) = softmax(QK^t / root(d_k)) * V
+
+Hay dos tipos de funciones de atención:
+
+1. Atención aditiva:
+    Computa la función de compatibilidad usando una feed-forward network con una única hidden-layer.
+
+2. Dot-product (multiplicatibe) attention 
+    Es más eficiente en tiempo y memoria que la anterior, ya que se puede implementar como una multiplicación eficiente de matrices.
+
+La aditiva es mejor para casos grandes, posiblemente porque el dot-product crece demasiado.
+    La propuesta aplica una escala 1/root(d_k)
+
+
+=== Multi-head Attention
+
+Se quiere proyectar linealmente las queries (d_k), keys (d_k) y values (d_v), h-veces con distintas proyecciones lineales aprendidas
